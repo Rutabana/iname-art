@@ -1,0 +1,36 @@
+.wrapper {
+  overflow: hidden;
+  border-top: 0.5px solid #eeeeee;
+  border-bottom: 0.5px solid #eeeeee;
+  background: #ffffff;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+.track {
+  display: inline-flex;
+  animation: ticker 22s linear infinite;
+}
+
+.list {
+  display: inline-flex;
+  align-items: center;
+}
+
+.item {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #cccccc;
+}
+
+.dot {
+  color: #1BBFA0;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

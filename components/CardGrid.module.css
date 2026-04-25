@@ -1,0 +1,149 @@
+/* ---- Grid ---- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---- Card shell ---- */
+.card {
+  position: relative;
+  height: 280px;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* ---- Video overlay: z-5, normally hidden ---- */
+.videoOverlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ---- Content layer: z-15 ---- */
+.cardContent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  z-index: 15;
+}
+
+/* Card 3 variant: everything pushed to bottom */
+.contentEnd {
+  justify-content: flex-end;
+}
+
+/* ---- Tag pill ---- */
+.tag {
+  display: inline-block;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  line-height: 1;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+/* ---- Title + subtitle cluster ---- */
+.cardBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.title {
+  font-family: var(--font-playfair), serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* ---- Card 2: Spiral ---- */
+/* Wrapper centres the SVG; inner SVG rotates independently */
+.spiralWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.spiral {
+  display: block;
+  animation: rotateSlow 25s linear infinite;
+}
+
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ---- Card 3: Crowd ---- */
+.crowdWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 24px;
+  overflow: hidden;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+/*
+  Each figure: 6px wide + 4px margin-right = 10px slot.
+  40 figures × 10px = 400px per group.
+  Two groups = 800px total.
+  translateX(-50%) = -400px = exactly one group → seamless loop.
+*/
+.crowdTrack {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: crowd 12s linear infinite;
+}
+
+.figure {
+  display: block;
+  flex-shrink: 0;
+  margin-right: 4px;
+}
+
+@keyframes crowd {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

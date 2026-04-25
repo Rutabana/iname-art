@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//private/tmp/**)",
+      "Bash(npx create-next-app@14 inema-arts --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --no-git --yes)",
+      "Bash(npm install *)",
+      "Bash(npm uninstall *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001)",
+      "Bash(curl -s http://localhost:3001)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(npx tsc *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3001)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3001)",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(/bin/cp /Users/loic/Codebase/Inema/public/logo.png /Users/loic/Codebase/Inema/app/icon.png)"
+    ]
+  }
+}

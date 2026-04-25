@@ -1,0 +1,54 @@
+/* ── Filmstrip ─────────────────────────────────────────────────────────────── */
+
+.filmstripWrapper {
+  background: #111111;
+  overflow: hidden;
+  padding: 20px 0;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+/*
+  8 items with widths 200+160+220+180+200+240+175+195 = 1570px
+  Each item has margin-right: 12px → 8×12 = 96px
+  Per-group total = 1666px. Two groups = 3332px.
+  translateX(-50%) = −1666px = exactly one group → seamless loop.
+*/
+.filmstripTrack {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: filmstrip 30s linear infinite;
+}
+
+@keyframes filmstrip {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Nav / social links ────────────────────────────────────────────────────── */
+
+.navLink {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.navLink:hover {
+  color: #ffffff;
+}
+
+/* ── Pulsing resident dot ──────────────────────────────────────────────────── */
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1BBFA0;
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,  100% { opacity: 1;   transform: scale(1);    }
+  50%        { opacity: 0.3; transform: scale(0.65); }
+}
