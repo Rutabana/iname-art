@@ -114,7 +114,7 @@ export default function CardGrid() {
     <section className={styles.grid}>
 
       {/* Card 1 — Recycled Futures */}
-      <Card index={0} video="https://d3s90ejqky0l1n.cloudfront.net/space.mp4" bg="#0d0d1a">
+      <Card index={0} video="https://d3s90ejqky0l1n.cloudfront.net/iname-art/space.mp4" bg="#0d0d1a">
         <div className={styles.cardContent}>
           <span className={styles.tag} style={{ background: "#8B3FE8" }}>
             Now on view
@@ -132,7 +132,7 @@ export default function CardGrid() {
       </Card>
 
       {/* Card 2 — The spiral series */}
-      <Card index={1} video="https://d3s90ejqky0l1n.cloudfront.net/flower%20sky.mp4" bg="#1BBFA0">
+      <Card index={1} video="https://d3s90ejqky0l1n.cloudfront.net/iname-art/flower-sky.mp4" bg="#1BBFA0">
         {/* Spiral: wrapper centres it, inner SVG rotates */}
         <div className={styles.spiralWrapper} aria-hidden="true">
           <svg
@@ -165,7 +165,7 @@ export default function CardGrid() {
       </Card>
 
       {/* Card 3 — Where Kigali creates */}
-      <Card index={2} video="https://d3s90ejqky0l1n.cloudfront.net/surreal%20man.mp4" bg="#111111">
+      <Card index={2} video="https://d3s90ejqky0l1n.cloudfront.net/iname-art/surreal-man.mp4" bg="#111111">
         {/* Crowd scrolls across the top */}
         <div className={styles.crowdWrapper} aria-hidden="true">
           <div className={styles.crowdTrack}>

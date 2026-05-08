@@ -280,7 +280,7 @@ export default function Hero() {
           style={{ x: bgMouseX, y: bgMouseY }}
         >
           <Image
-            src="https://d3s90ejqky0l1n.cloudfront.net/inema-bg.avif"
+            src="https://d3s90ejqky0l1n.cloudfront.net/iname-art/inema-bg.avif"
             alt=""
             fill
             style={{ objectFit: "cover", objectPosition: "center" }}
@@ -314,7 +314,7 @@ export default function Hero() {
           {/* Banana tree 1 — bottom-left, slightly off-screen */}
           <div className="absolute bottom-0 -left-16 h-[70vh] pointer-events-none select-none">
             <Image
-              src="https://d3s90ejqky0l1n.cloudfront.net/banana-tree-1.png"
+              src="https://d3s90ejqky0l1n.cloudfront.net/iname-art/banana-tree-1.png"
               alt=""
               width={0}
               height={0}
@@ -326,7 +326,7 @@ export default function Hero() {
           {/* Banana tree 2 — bottom-right, partially behind portrait */}
           <div className="absolute bottom-0 right-[15%] h-[60vh] pointer-events-none select-none">
             <Image
-              src="https://d3s90ejqky0l1n.cloudfront.net/banana-tree-2.png"
+              src="https://d3s90ejqky0l1n.cloudfront.net/iname-art/banana-tree-2.png"
               alt=""
               width={0}
               height={0}
@@ -343,7 +343,7 @@ export default function Hero() {
             transition={{ duration: 18, ease: "easeInOut", repeat: Infinity }}
           >
             <Image
-              src="https://d3s90ejqky0l1n.cloudfront.net/cloud-1.png"
+              src="https://d3s90ejqky0l1n.cloudfront.net/iname-art/cloud-1.png"
               alt=""
               width={0}
               height={0}
@@ -360,7 +360,7 @@ export default function Hero() {
             transition={{ duration: 24, ease: "easeInOut", repeat: Infinity }}
           >
             <Image
-              src="https://d3s90ejqky0l1n.cloudfront.net/cloud-2.png"
+              src="https://d3s90ejqky0l1n.cloudfront.net/iname-art/cloud-2.png"
               alt=""
               width={0}
               height={0}
@@ -377,7 +377,7 @@ export default function Hero() {
             transition={{ duration: 30, ease: "easeInOut", repeat: Infinity }}
           >
             <Image
-              src="https://d3s90ejqky0l1n.cloudfront.net/cloud-3.png"
+              src="https://d3s90ejqky0l1n.cloudfront.net/iname-art/cloud-3.png"
               alt=""
               width={0}
               height={0}
@@ -446,7 +446,7 @@ export default function Hero() {
         >
           <div className="h-full">
             <Image
-              src="https://d3s90ejqky0l1n.cloudfront.net/blue-shirt-2.avif"
+              src="https://d3s90ejqky0l1n.cloudfront.net/iname-art/blue-shirt-2.avif"
               alt="Inema Arts Centre"
               width={0}
               height={0}

@@ -35,7 +35,7 @@ export default function CanvasSection() {
         <motion.video
           ref={videoRef}
           className={styles.videoOverlay}
-          src="https://d3s90ejqky0l1n.cloudfront.net/balcony.mp4"
+          src="https://d3s90ejqky0l1n.cloudfront.net/iname-art/balcony.mp4"
           muted
           loop
           playsInline
